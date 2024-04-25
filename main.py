@@ -27,9 +27,9 @@ async def get_time():
 
 @app.get ("/api/info")
 async def info():
-    return {people}
+    return people
 
-@app.post ("api/place")
+@app.post ("/api/place")
 async def place(data=Body()):
     person = Person(data["name"], data["age"])
     people.append(person)
